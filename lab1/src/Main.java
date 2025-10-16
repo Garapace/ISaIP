@@ -116,6 +116,5 @@ public class Main {
         if (specialCharsCheck) alphabetPower += 33;
         
         return new int[] {alphabetPower, password.length()};
-        
     }
 }
