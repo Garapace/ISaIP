@@ -11,7 +11,7 @@ public class Main {
 
     private static final Set<Character> specialChars = new HashSet<>();
 
-    // символ двойные ковычки ["] и обратный слеш [\] нужно экранировать -> ["] = [\"], [\] -> [\\]
+    // символ двойные ковычки ["] и обратный слэш [\] нужно экранировать -> ["] = [\"], [\] -> [\\]
     static {
         for (char ch : " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".toCharArray()) { 
             specialChars.add(ch);
@@ -19,7 +19,6 @@ public class Main {
     }
 
     
-
     public static void main(String[] args) {
         print(10, 8);
         print(26, 8);
@@ -117,5 +116,6 @@ public class Main {
         if (specialCharsCheck) alphabetPower += 33;
         
         return new int[] {alphabetPower, password.length()};
+        
     }
 }
