@@ -17,7 +17,6 @@ public class Main {
             specialChars.add(ch);
         }
     }
-
     
     public static void main(String[] args) {
         print(10, 8);
