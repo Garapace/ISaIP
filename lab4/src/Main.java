@@ -25,11 +25,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String inputFile = "input.txt";
-        String outputFileCaesar = "outputCaesar.txt";
-        String outputFileVigener = "outputVigener.txt";
-        String returnCaesar = "returnCaesar.txt";
-        String returnVigener = "returnVigener.txt";
+        String inputFile = "assets/input.txt";
+        String outputFileCaesar = "assets/outputCaesar.txt";
+        String outputFileVigener = "assets/outputVigener.txt";
+        String returnCaesar = "assets/returnCaesar.txt";
+        String returnVigener = "assets/returnVigener.txt";
 
         // Шифрование
         String input = read(inputFile).toUpperCase();
@@ -46,13 +46,20 @@ public class Main {
         write(returnCaesar, decryptCaesar(cipherCaesar, 6));
         write(returnVigener, decryptVigener(cipherVigener, "МЕЧТА"));
 
-        // квадрат виженера
+        // Записываем квадрат Виженера в файл
+        StringBuilder vigenerTable = new StringBuilder();
+
         for (int i = 0; i < squareVigener.length; i++) {
             for (int j = 0; j < squareVigener[0].length; j++) {
-                System.out.print(squareVigener[i][j] + "\t");
+                vigenerTable.append(squareVigener[i][j]).append('\t');
             }
-            System.out.println();
+            vigenerTable.append('\n');
         }
+
+        // Путь к файлу, куда сохраняется квадрат
+        String vigenerSquareFile = "assets/vigenerSquare.txt";
+        write(vigenerSquareFile, vigenerTable.toString());
+        System.out.println("Квадрат Виженера записан в файл: " + vigenerSquareFile);
     }
     public static String read(String inputFile) {
         String text = "";
