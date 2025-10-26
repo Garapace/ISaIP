@@ -5,9 +5,9 @@ import java.util.Set;
 public class Main {
 
     private static int alphabetPower;               // Мощность алфавита: a-z + A-Z = 52.  | N = 52
-    private static double passwordPerSecond = 1e6;  // Скорость перебора паролей в секунду | S
+    private static double passwordPerSecond = 10;  // Скорость перебора паролей в секунду | S
     private static int maxIncorrectAttempts = 5;    // Количество неправильных попыток     | T
-    private static int delay = 0;                   // Пауза, после T неправильных попыток | V
+    private static int delay = 10;                   // Пауза, после T неправильных попыток | V
 
     private static final Set<Character> specialChars = new HashSet<>();
 
@@ -67,6 +67,8 @@ public class Main {
         double timeWODelay = totalCombinations / passwordPerSecond;                       // количество секунд для проверки всех паролей
         double timeWDelay = Math.floor(totalCombinations / maxIncorrectAttempts) * delay; // количество секунд для проверки всех паролей с учётом паузы при неправильных попытках
         
+        if (passwordPerSecond % maxIncorrectAttempts == 0) timeWDelay -= delay;
+
         return new double[] {totalCombinations, timeWDelay + timeWODelay};
     }
 
