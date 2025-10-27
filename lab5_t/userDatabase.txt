@@ -1,0 +1,4 @@
+id    user_name            password             ban
+1     admin                admin                f
+25    user                 userR!               f
+26    test                 test                 t

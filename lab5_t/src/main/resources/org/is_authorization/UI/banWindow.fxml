@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" style="-fx-background-color: DCDCDC;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.is_authorization.controllers.BanController">
+    <children>
+        <Button fx:id="acceptButton" alignment="CENTER" layoutX="231.0" layoutY="222.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="159.0" style="-fx-background-color: ffffff;" text="Подтвердить" />
+        <Label fx:id="textLabel" alignment="CENTER" layoutX="60.0" layoutY="35.0" prefHeight="48.0" prefWidth="328.0" text="Забанить пользователя">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="backButton" alignment="CENTER" layoutX="62.0" layoutY="222.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="159.0" style="-fx-background-color: ffffff;" text="Отмена" />
+      <TextField fx:id="userField" alignment="CENTER" layoutX="62.0" layoutY="104.0" prefHeight="30.0" prefWidth="328.0" promptText="Введите имя пользователя" style="-fx-border-radius: 5;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+    </children>
+</AnchorPane>
