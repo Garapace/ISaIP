@@ -6,7 +6,7 @@ public class Lab6Vigener {
 
     public static void main(String[] args) {
         String text = Lab4.read("input.txt").toUpperCase();
-        String cipher = Lab4.encryptVigener(text, "АДИДАС");
+        String cipher = Lab4.encryptVigener(text, "АРКА");
         System.out.println(keyLenght(cipher));
         System.out.println(breakCipherVigener(cipher));
     }
